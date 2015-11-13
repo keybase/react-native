@@ -303,6 +303,8 @@ class ResolutionRequest {
         file = potentialModulePath + '.' + this._platform + '.js';
       } else if (this._fastfs.fileExists(potentialModulePath + '.js')) {
         file = potentialModulePath + '.js';
+      } else if (this._fastfs.fileExists(potentialModulePath + '.mobile.js')) {
+        file = potentialModulePath + '.mobile.js';
       } else if (this._fastfs.fileExists(potentialModulePath + '.json')) {
         file = potentialModulePath + '.json';
       } else {

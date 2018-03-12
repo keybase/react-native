@@ -141,6 +141,7 @@ public class ReactImageManager extends SimpleViewManager<ReactImageView> {
   @ReactProp(name = ViewProps.RESIZE_MODE)
   public void setResizeMode(ReactImageView view, @Nullable String resizeMode) {
     view.setScaleType(ImageResizeMode.toScaleType(resizeMode));
+    view.setTileMode(ImageResizeMode.toTileMode(resizeMode));
   }
 
   @ReactProp(name = ViewProps.RESIZE_METHOD)
